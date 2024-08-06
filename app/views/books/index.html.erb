@@ -6,5 +6,12 @@
     <span>
         <%= link_to book.title, books_path(book.id) %>
     </span>
+    
+   <p>画像</p>
+   <% if book.image.attached? %>
+        <%= image_tag book.image, size: "200x200" %>
+    <% else %>
+        <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
 
 <% end %>

@@ -1,17 +1,30 @@
+<div class="book-wrap">
+<% @books.each do |book| %>
+  <div class= "book-box">
+    <% if book.image.attached? %>
+      <%= image_tag book.image, size: "200x200" %>
+    <% else %>
+      <%= image_tag 'no_image', size: "200x200" %>
+    <% end %>
+    <div class="book-comment">
+        <span class="book-body"><%= book.body %></span>
+        <span class="book-title"><%= link_to book.title, book_path(book.id) %></span>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
 <h1>投稿一覧</h1>
 
 <% @books.each do |book| %>
     
     <p>タイトル</p>
     <span>
-        <%= link_to book.title, books_path(book.id) %>
+        <%= link_to book.title, book_path(book.id) %>
     </span>
     
    <p>画像</p>
-   <% if book.image.attached? %>
-        <%= image_tag book.image, size: "200x200" %>
-    <% else %>
-        <%= image_tag 'no_image', size: "200x200" %>
-  <% end %>
+   <%= image_tag book.image, size: "200x200" %>
 
 <% end %>

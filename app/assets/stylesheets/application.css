@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-header, h1, nav, .book-comment {
+header, h1, h2, nav, .book-comment {
     font-family: 'Kaushan', cursive, sans-serif;
 }
 

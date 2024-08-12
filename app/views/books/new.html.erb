@@ -1,20 +1,30 @@
-<%= form_with model: @books, url: '/books', method: :post do |f| %>
+    <h2>New book</h2>
 
-    <h4>Title</h4>
-    <%= f.text_area :title %>
+
+
+  <%= form_with model: @book, url: '/books', method: :post do |f| %>
+
+      <h4>Title</h4>
+      <%= f.text_area :title %>
     
-    <h4>Body</h4>
-    <%= f.text_area :body %>
+      <h4>Body</h4>
+      <%= f.text_area :body %>
     
-    <%= f.submit 'Create Book' %>
+      <%= f.submit 'Create Book' %>
 
-<% end %>
+  <% end %>
 
-<% if @books.any? {|book|book.errors.any?} %>
-  <%= @books.count {|book|book.errors.any?} %>件のエラーが発生しました
-  <ul>
-      <% book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+  <% if @books.present? && @books.any? {|book|book.errors.any?} %>
+    <ul>
+      <% @books.each do |book| %>
+       <% if book.erroes.any? %>
+        <% book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+       <% end %>
       <% end %>
-  </ul>
-<% end %>
+    </ul>
+  <% end %>
+  </body>
+
+</html>

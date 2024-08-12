@@ -1,7 +1,14 @@
 class BooksController < ApplicationController
   
+  def new
+    @book = Book.new
+  end
+  
   def create
-   @book = Book.new(book_params)
+   @book = Book.new
+   if params[:book].present?
+     @book.attributes = book_params
+    end
    if @book.save
      flash[:notice] = "投稿に成功しました。"
      redirect_to book_path(@book.id)

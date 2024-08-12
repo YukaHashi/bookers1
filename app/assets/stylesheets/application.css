@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-header, h1, h2, nav, .book-comment {
+header, h1, h2, h4, nav, .book-comment {
     font-family: 'Kaushan', cursive, sans-serif;
 }
 
@@ -45,13 +45,17 @@ body {
     backgroud-color: #fff
 }
 
-p {
+p, ul, {
    margin: 33px;
    line-height: 18px;
    font-size: 13px;
    font-family: verdana, arial, helvetica, sans-serif;
 }
 
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
 
 nav {
     width: 880px;

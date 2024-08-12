@@ -36,6 +36,23 @@ header .headline {
     font-size: 32px
 }
 
+body {
+    margin: 33px;
+    line-height: 18px;
+    font-size: 13px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #333;
+    backgroud-color: #fff
+}
+
+p {
+   margin: 33px;
+   line-height: 18px;
+   font-size: 13px;
+   font-family: verdana, arial, helvetica, sans-serif;
+}
+
+
 nav {
     width: 880px;
     margin: 0 auto;

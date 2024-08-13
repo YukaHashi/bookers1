@@ -21,6 +21,14 @@
 }
 
 header, h1, h2, h4, nav, .book-comment {
+    display: bloc;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
     font-family: 'Kaushan', cursive, sans-serif;
 }
 
@@ -45,11 +53,43 @@ body {
     backgroud-color: #fff
 }
 
-p, ul, {
+p, ul, td, {
    margin: 33px;
    line-height: 18px;
    font-size: 13px;
    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-size: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+th {
+    padding-bottom: 5px;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    unicode-bidi: isolate;
 }
 
 div {

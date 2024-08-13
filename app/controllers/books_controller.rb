@@ -10,7 +10,7 @@ class BooksController < ApplicationController
      @book.attributes = book_params
     end
    if @book.save
-     flash[:notice] = "投稿に成功しました。"
+     flash[:notice] = "Book was succerrfully created."
      redirect_to book_path(@book.id)
    else
      flash.now[:alert] = "投稿に失敗しました。"

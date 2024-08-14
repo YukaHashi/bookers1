@@ -14,9 +14,9 @@
 
   <% end %>
 
-  <% if @books.present? && @books.any? {|book|book.errors.any?} %>
+  <% if @book.present? && @book.any? {|book|book.errors.any?} %>
     <ul>
-      <% @books.each do |book| %>
+      <% @book.each do |book| %>
        <% if book.erroes.any? %>
         <% book.errors.full_messages.each do |message| %>
           <li><%= message %></li>

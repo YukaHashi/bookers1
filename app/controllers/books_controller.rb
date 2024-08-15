@@ -9,8 +9,9 @@ class BooksController < ApplicationController
      flash[:notice] = "Book was succerrfully created."
      redirect_to book_path(@book.id)
     else
-     flash.now[:alert] = "errors prohibited this book from being saved:"
-     render :new
+     #flash.now[:alert] = "errors prohibited this book from being saved:"
+     @books = Book.all
+     render = index_book_path
     end
   end
 
